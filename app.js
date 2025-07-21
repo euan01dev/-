@@ -11,7 +11,6 @@ scrollButton.addEventListener('click', () => {
 
   resetButton.style.display = 'block';
 
-  // Start heart generation
   const heartInterval = setInterval(() => {
     const heart = document.createElement('div');
     heart.classList.add('heart');
