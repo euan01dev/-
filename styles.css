@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('for-you-cat-flower.gif'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.click-btn {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.message {
+  background-image: url('elGato.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.message.show {
+  display: flex;
+}
+
+.red-box {
+  background-image: url('shaquille-shaq-kiss.gif'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  border: 3px solid red;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.overlay-text {
+  text-align: justify;
+  font-family: 'Georgia', serif; /* looks more formal */
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px 40px;
+  border-radius: 8px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#heart-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  color: red;
+  animation: floatUp 4s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.reset-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
